@@ -1,0 +1,10 @@
+<div [class]="classes()">
+  <h2 class="text-amber-700 font-medium text-xl uppercase">
+    Articles and tutorials
+  </h2>
+  <div class="mt-4 flex flex-col gap-5">
+    @for (article of articles; track $index) {
+    <app-article-card />
+    }
+  </div>
+</div>
