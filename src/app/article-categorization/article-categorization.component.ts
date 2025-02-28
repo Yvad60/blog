@@ -7,4 +7,13 @@ import { Component, input } from '@angular/core';
 })
 export class ArticleCategorizationComponent {
   classes = input('');
+
+  categories = [
+    'Angular',
+    'React',
+    'General',
+    'Kubernetes',
+    'Netlify Functions',
+    'Heroku Functions',
+  ];
 }

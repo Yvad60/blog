@@ -1,5 +1,16 @@
-<div [class]="classes()">
-  <h2 class="text-amber-700 font-medium text-xl uppercase">
+<div class="sticky top-0">
+  <h2 class="text-xl font-medium uppercase text-amber-700">
     Browse by category
   </h2>
+  <div class="flex flex-wrap mt-5 gap-x-3 gap-y-2">
+    @for (category of categories; track $index) {
+    <button
+      class="border border-amber-700 text-sm px-4 py-0.5 rounded-full hover:scale-105 transition-all duration-100"
+    >
+      {{ category }}
+    </button>
+    }
+  </div>
+
+  <div></div>
 </div>
