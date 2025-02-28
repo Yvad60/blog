@@ -32,6 +32,12 @@ importers:
       '@angular/router':
         specifier: ^19.1.0
         version: 19.2.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.0(@angular/animations@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0)))(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2)
+      '@ng-icons/core':
+        specifier: ^30.3.0
+        version: 30.3.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@ng-icons/heroicons':
+        specifier: ^30.3.0
+        version: 30.3.0
       '@tailwindcss/postcss':
         specifier: ^4.0.9
         version: 4.0.9
@@ -1426,6 +1432,16 @@ packages:
   '@napi-rs/nice@1.0.1':
     resolution: {integrity: sha512-zM0mVWSXE0a0h9aKACLwKmD6nHcRiKrPpCfvaKqG1CqDEyjEawId0ocXxVzPMCAm6kkWr2P025msfxXEnt8UGQ==}
     engines: {node: '>= 10'}
+
+  '@ng-icons/core@30.3.0':
+    resolution: {integrity: sha512-jJnstxpK39RUjvV1eNpLZB7UkMX5K5DIkEoikCsSr7GyboMsfZYpj3UgePCMRxoZdw/jFpWpo7tywB6bYsKSvw==}
+    peerDependencies:
+      '@angular/common': '>=18.0.0'
+      '@angular/core': '>=18.0.0'
+      rxjs: ^6.5.3 || ^7.4.0
+
+  '@ng-icons/heroicons@30.3.0':
+    resolution: {integrity: sha512-ubGlUZ0ErcnUusu08C++DcVMG8AZcpWkHsNKl3AYqw1YxyIb1ZUxqrONFiXEknjVAqidSYG/jxvSEE8CtqL63A==}
 
   '@ngtools/webpack@19.2.0':
     resolution: {integrity: sha512-63/8ys3bNK2h7Py/dKHZ4ZClxQz6xuz3skUgLZIMs9O076KPsHTKDKEDG2oicmwe/nOXjVt6n9Z4wprFaRLbvw==}
@@ -5865,6 +5881,17 @@ snapshots:
       '@napi-rs/nice-win32-ia32-msvc': 1.0.1
       '@napi-rs/nice-win32-x64-msvc': 1.0.1
     optional: true
+
+  '@ng-icons/core@30.3.0(@angular/common@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@angular/core': 19.2.0(rxjs@7.8.2)(zone.js@0.15.0)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@ng-icons/heroicons@30.3.0':
+    dependencies:
+      tslib: 2.8.1
 
   '@ngtools/webpack@19.2.0(@angular/compiler-cli@19.2.0(@angular/compiler@19.2.0(@angular/core@19.2.0(rxjs@7.8.2)(zone.js@0.15.0)))(typescript@5.7.3))(typescript@5.7.3)(webpack@5.98.0(esbuild@0.25.0))':
     dependencies:
