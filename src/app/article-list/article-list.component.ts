@@ -22,7 +22,6 @@ export class ArticleListComponent implements OnInit, OnDestroy {
     this.subscription = this.articleService
       .fetchArticles()
       .subscribe((data) => {
-        console.log(data);
         this.articles = data;
         this.isLoading = false;
       });

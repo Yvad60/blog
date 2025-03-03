@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroRss, heroUsers } from '@ng-icons/heroicons/outline';
+import { heroRss } from '@ng-icons/heroicons/outline';
 
 @Component({
   selector: 'app-navbar',
   imports: [NgIcon],
   templateUrl: './navbar.component.html',
-  viewProviders: [provideIcons({ heroUsers, heroRss })],
+  viewProviders: [provideIcons({ heroRss })],
 })
 export class NavbarComponent {
   navLinks = ['Categories', 'Goodies', 'About'];
