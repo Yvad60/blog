@@ -5,5 +5,10 @@
   <p class="mt-2">
     {{ article().description }}
   </p>
-  <button class="mt-2 font-semibold">Read more</button>
+  <button
+    class="mt-2 font-semibold cursor-pointer"
+    [routerLink]="`/article/${article().slug}`"
+  >
+    Read more
+  </button>
 </div>
