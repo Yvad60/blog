@@ -1,13 +1,34 @@
 <main class="flex flex-col items-center justify-center h-full min-h-screen">
-  <form action="" class="min-w-[440px] shadow-lg px-10 py-12 rounded-lg border border-gray-200">
-    <span class="block text-center"> Welcome back!</span>
+  <form
+    action=""
+    class="min-w-[480px] shadow-lg px-10 pt-10 pb-12 rounded-lg border border-gray-200"
+    [formGroup]="loginForm"
+  >
+    <span class="block text-center text-lg">Welcome back</span>
+    <p class="mt-1">Let's write something awesome today</p>
+    <div class="flex flex-col gap-3 mt-4">
+      <div>
+        <label for="email" class="block">Email</label>
+        <input
+          id="email"
+          type="text"
+          class="border border-black/50 rounded-lg py-2 px-3 w-full mt-0.5"
+          placeholder="Enter email"
+          formControlName="email"
+        />
+      </div>
 
-    <div class="flex flex-col mt-4 gap-4">
-      <input type="text" class="border">
-      <input type="text" class="border">
-      <button>
-        Login
-      </button>
+      <div>
+        <label for="password" class="block">Password {{loginForm.get('email')?.value}}</label>
+        <input
+          id="password"
+          type="password"
+          class="border border-black/50 rounded-lg py-2 px-3 w-full mt-0.5"
+          placeholder="Enter password"
+          formControlName="password"
+        />
+      </div>
+      <button class="mt-4 text-white bg-amber-800 py-2 rounded-lg cursor-pointer">Login</button>
     </div>
   </form>
 </main>
