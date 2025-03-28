@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -11,23 +11,15 @@ import {
   templateUrl: './login.component.html',
   imports: [ReactiveFormsModule],
 })
-export class LoginComponent implements OnChanges, OnInit {
+export class LoginComponent {
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [Validators.minLength(1), Validators.email]),
     password: new FormControl('', [Validators.required]),
   });
 
-  onSubmit() {
-    console.log(this.loginForm.value);
+  get emailControl() {
+    return this.loginForm.get('email');
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes', changes);
-  }
-
-  ngOnInit(): void {
-    this.loginForm.valueChanges.subscribe((value) => {
-      console.log('value', value);
-    })
-  }
+  onSubmit() {}
 }

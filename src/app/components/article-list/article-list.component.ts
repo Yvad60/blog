@@ -1,7 +1,7 @@
 import { Component, input, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { ArticlesService } from '../../services/articles.service';
 import { ArticleCardComponent } from '../article-card/article-card.component';
-import { ArticleService } from './article-list.service';
 
 @Component({
   selector: 'app-article-list',
@@ -15,12 +15,12 @@ export class ArticleListComponent implements OnInit, OnDestroy {
   errorMessage = '';
   subscription: Subscription | undefined;
 
-  constructor(private readonly articleService: ArticleService) {}
+  constructor(private readonly articlesService: ArticlesService) {}
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.subscription = this.articleService
-      .fetchArticles()
+    this.subscription = this.articlesService
+      .fetchAllArticles()
       .subscribe((data) => {
         this.articles = data;
         this.isLoading = false;

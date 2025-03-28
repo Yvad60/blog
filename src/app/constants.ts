@@ -1,2 +1,2 @@
-export const DEV_TO_ARTICLES_API_URL =
-  'https://dev.to/api/articles?username=ivadyhabimana';
+export const DEV_USERNAME = 'ivadyhabimana';
+export const DEV_API_URL = 'https://dev.to/api';

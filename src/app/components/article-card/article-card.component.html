@@ -6,9 +6,9 @@
     {{ article().description }}
   </p>
   <button
-    class="mt-2 font-semibold cursor-pointer"
-    [routerLink]="`/article/${article().slug}`"
+    class="mt-1 font-semibold text-amber-900 cursor-pointer hover:underline underline-offset-3"
+    (click)="openArticle(article().url)"
   >
-    Read more
+    Read more on dev.to
   </button>
 </div>

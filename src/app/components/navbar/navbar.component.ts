@@ -9,5 +9,4 @@ import { heroRss } from '@ng-icons/heroicons/outline';
   viewProviders: [provideIcons({ heroRss })],
 })
 export class NavbarComponent {
-  navLinks = ['Categories', 'Goodies', 'About'];
 }

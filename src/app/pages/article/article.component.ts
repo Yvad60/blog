@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MarkdownComponent } from 'ngx-markdown';
 import { Subscription } from 'rxjs';
-import { ArticleService } from './article.service';
+import { ArticlesService } from '../../services/articles.service';
 
 @Component({
   selector: 'app-article',
@@ -15,18 +15,15 @@ export class ArticleComponent implements OnInit {
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly articleService: ArticleService
+    private readonly articlesService: ArticlesService
   ) {}
   ngOnInit(): void {
     const articleId = this.route.snapshot.paramMap.get('id');
     if (!articleId) return;
-    this.articleSubscription = this.articleService
-      .fetchArticles(articleId)
+    this.articleSubscription = this.articlesService
+      .fetchArticleBySlug(articleId)
       .subscribe((data) => {
-        console.log(data);
         this.articleHtml = data.body_markdown;
       });
-
-    console.log('ArticleComponent initialized', articleId);
   }
 }
