@@ -7,6 +7,4 @@ import { ArticleListComponent } from '../../components/article-list/article-list
   templateUrl: './home.component.html',
   imports: [ArticleListComponent, ArticleCategorizationComponent],
 })
-export class HomeComponent {
-  currentYear = new Date().getFullYear();
-}
+export class HomeComponent {}

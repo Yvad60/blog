@@ -23,6 +23,7 @@ export class ArticleComponent implements OnInit {
     this.articleSubscription = this.articlesService
       .fetchArticleBySlug(articleId)
       .subscribe((data) => {
+        // @ts-expect-error body_markdown is not in the type
         this.articleHtml = data.body_markdown;
       });
   }

@@ -1,2 +1,14 @@
-<app-navbar/>
-<router-outlet></router-outlet>
+<main class="flex flex-col h-screen max-h-screen overflow-hidden">
+  <app-navbar />
+  <div class="flex flex-col flex-1 h-[calc(100vh-116px)]">
+    <div class="h-full">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <footer class="flex justify-center py-4 text-white bg-amber-900/80">
+    <span class="flex items-center justify-center"
+      >Copyright&copy; <strong class="mx-1">ivadyhabimana</strong>
+      {{ currentYear }}
+    </span>
+  </footer>
+</main>

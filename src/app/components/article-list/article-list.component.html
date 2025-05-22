@@ -1,13 +1,18 @@
-<div class="h-full">
-  <h2 class="text-amber-700 font-medium text-xl sticky top-0 bg-white pb-4 uppercase">
+<div>
+  <h2
+    class="text-amber-700 font-medium text-xl sticky top-0 bg-white pb-4 uppercase"
+  >
     Articles and tutorials
   </h2>
   @if (isLoading) {
   <div>Loading</div>
   } @else {
-  <div class="flex flex-col gap-5">
+  <div class="flex flex-col gap-5 overflow-y-auto">
     @for (article of articles; track article.id) {
-    <app-article-card [article]="article" />
+    <div>
+      <app-article-card [article]="article" />
+      <app-article-card [article]="article" />
+    </div>
     }
   </div>
   }

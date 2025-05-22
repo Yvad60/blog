@@ -1,15 +1,8 @@
-<main
-  class="h-screen max-h-screen overflow-hidden overflow-y-auto flex flex-col"
+<div
+  class="max-w-6xl px-4 mx-auto pt-16 sm:px-6 lg:px-8 h-full overflow-hidden"
 >
-  <div
-    class="max-w-6xl px-4 mx-auto mt-16 sm:px-6 lg:px-8 h-full overflow-y-scroll"
-  >
-    <div class="relative grid grid-cols-6 gap-18">
-      <app-article-list class="col-span-4" />
-      <app-article-categorization class="sticky top-0 z-20 col-span-2" />
-    </div>
+  <div class="relative grid grid-cols-6 gap-18 h-full overflow-hidden">
+    <app-article-list class="col-span-4 h-full overflow-y-auto" />
+    <app-article-categorization class="sticky top-0 z-20 col-span-2" />
   </div>
-  <footer class="bg-amber-900/80 flex py-4 justify-center text-white">
-    <span class="flex justify-center items-center">Copyright&copy; <strong class="mx-1">ivadyhabimana</strong> {{ currentYear }} </span>
-  </footer>
-</main>
+</div>
